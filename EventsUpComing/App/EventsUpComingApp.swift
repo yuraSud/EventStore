@@ -10,9 +10,11 @@ import SwiftData
 
 @main
 struct EventsUpComingApp: App {
+    
+    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            Todo.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -25,7 +27,7 @@ struct EventsUpComingApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CoordinatorView()
         }
         .modelContainer(sharedModelContainer)
     }

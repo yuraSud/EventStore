@@ -7,14 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C74251B2B0605F300AE76C0 /* EventEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C74251A2B0605F300AE76C0 /* EventEditorView.swift */; };
+		9C74251F2B0613E100AE76C0 /* TextEditorAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C74251E2B0613E100AE76C0 /* TextEditorAppearance.swift */; };
 		9C7F17E72AFEAA7100BDCDDF /* EventsUpComingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F17E62AFEAA7100BDCDDF /* EventsUpComingApp.swift */; };
 		9C7F17E92AFEAA7100BDCDDF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F17E82AFEAA7100BDCDDF /* ContentView.swift */; };
-		9C7F17EB2AFEAA7100BDCDDF /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F17EA2AFEAA7100BDCDDF /* Item.swift */; };
+		9C7F17EB2AFEAA7100BDCDDF /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F17EA2AFEAA7100BDCDDF /* Todo.swift */; };
 		9C7F17ED2AFEAA7200BDCDDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C7F17EC2AFEAA7200BDCDDF /* Assets.xcassets */; };
 		9C7F17F02AFEAA7200BDCDDF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C7F17EF2AFEAA7200BDCDDF /* Preview Assets.xcassets */; };
 		9C7F17FA2AFEAA7200BDCDDF /* EventsUpComingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F17F92AFEAA7200BDCDDF /* EventsUpComingTests.swift */; };
 		9C7F18042AFEAA7200BDCDDF /* EventsUpComingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F18032AFEAA7200BDCDDF /* EventsUpComingUITests.swift */; };
 		9C7F18062AFEAA7200BDCDDF /* EventsUpComingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F18052AFEAA7200BDCDDF /* EventsUpComingUITestsLaunchTests.swift */; };
+		9C7F18142AFEABB600BDCDDF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F18132AFEABB600BDCDDF /* Coordinator.swift */; };
+		9C7F18162AFEAC0400BDCDDF /* ScreenPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F18152AFEAC0400BDCDDF /* ScreenPages.swift */; };
+		9C7F181B2AFEAF2400BDCDDF /* SharedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F181A2AFEAF2400BDCDDF /* SharedView.swift */; };
+		9C7F181D2AFEB03B00BDCDDF /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F181C2AFEB03B00BDCDDF /* CoordinatorView.swift */; };
+		9C7F181F2AFEB1F100BDCDDF /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F181E2AFEB1F100BDCDDF /* EventListView.swift */; };
+		9C7F18232AFEB31D00BDCDDF /* CreateEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F18222AFEB31D00BDCDDF /* CreateEventsView.swift */; };
+		9C7F18272AFEC1B900BDCDDF /* ButtonChoise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F18262AFEC1B900BDCDDF /* ButtonChoise.swift */; };
+		9C7F182A2AFEC42300BDCDDF /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F18292AFEC42300BDCDDF /* Color+Extension.swift */; };
+		9C7F182D2AFEC5FF00BDCDDF /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C7F182C2AFEC5FF00BDCDDF /* Poppins-Regular.ttf */; };
+		9C7F18302AFEC78800BDCDDF /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F182F2AFEC78800BDCDDF /* Font+Extension.swift */; };
+		9C7F18332AFEC97B00BDCDDF /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F18322AFEC97B00BDCDDF /* EventListViewModel.swift */; };
+		9CA826782B04CC19004D5E2A /* EditEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA826772B04CC19004D5E2A /* EditEvents.swift */; };
+		9CDDF9A52B039AAF00A75C0C /* PeriodButtonsPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDDF9A42B039AAF00A75C0C /* PeriodButtonsPicker.swift */; };
+		9CDDF9AA2B03B5E700A75C0C /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDDF9A92B03B5E700A75C0C /* EventCell.swift */; };
+		9CDDF9AC2B03B88900A75C0C /* IventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDDF9AB2B03B88900A75C0C /* IventModel.swift */; };
+		9CDDF9AE2B03CC9400A75C0C /* HeaderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDDF9AD2B03CC9400A75C0C /* HeaderList.swift */; };
+		9CDDF9B02B03CDF300A75C0C /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CDDF9AF2B03CDF300A75C0C /* Poppins-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +54,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C74251A2B0605F300AE76C0 /* EventEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEditorView.swift; sourceTree = "<group>"; };
+		9C74251E2B0613E100AE76C0 /* TextEditorAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditorAppearance.swift; sourceTree = "<group>"; };
 		9C7F17E32AFEAA7100BDCDDF /* EventsUpComing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventsUpComing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C7F17E62AFEAA7100BDCDDF /* EventsUpComingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsUpComingApp.swift; sourceTree = "<group>"; };
 		9C7F17E82AFEAA7100BDCDDF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		9C7F17EA2AFEAA7100BDCDDF /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		9C7F17EA2AFEAA7100BDCDDF /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		9C7F17EC2AFEAA7200BDCDDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C7F17EF2AFEAA7200BDCDDF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9C7F17F52AFEAA7200BDCDDF /* EventsUpComingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventsUpComingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +67,24 @@
 		9C7F17FF2AFEAA7200BDCDDF /* EventsUpComingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventsUpComingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C7F18032AFEAA7200BDCDDF /* EventsUpComingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsUpComingUITests.swift; sourceTree = "<group>"; };
 		9C7F18052AFEAA7200BDCDDF /* EventsUpComingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsUpComingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9C7F18132AFEABB600BDCDDF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		9C7F18152AFEAC0400BDCDDF /* ScreenPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenPages.swift; sourceTree = "<group>"; };
+		9C7F181A2AFEAF2400BDCDDF /* SharedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedView.swift; sourceTree = "<group>"; };
+		9C7F181C2AFEB03B00BDCDDF /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
+		9C7F181E2AFEB1F100BDCDDF /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
+		9C7F18222AFEB31D00BDCDDF /* CreateEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventsView.swift; sourceTree = "<group>"; };
+		9C7F18262AFEC1B900BDCDDF /* ButtonChoise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonChoise.swift; sourceTree = "<group>"; };
+		9C7F18292AFEC42300BDCDDF /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		9C7F182C2AFEC5FF00BDCDDF /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		9C7F182E2AFEC6E500BDCDDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9C7F182F2AFEC78800BDCDDF /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
+		9C7F18322AFEC97B00BDCDDF /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
+		9CA826772B04CC19004D5E2A /* EditEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEvents.swift; sourceTree = "<group>"; };
+		9CDDF9A42B039AAF00A75C0C /* PeriodButtonsPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodButtonsPicker.swift; sourceTree = "<group>"; };
+		9CDDF9A92B03B5E700A75C0C /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		9CDDF9AB2B03B88900A75C0C /* IventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IventModel.swift; sourceTree = "<group>"; };
+		9CDDF9AD2B03CC9400A75C0C /* HeaderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderList.swift; sourceTree = "<group>"; };
+		9CDDF9AF2B03CDF300A75C0C /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +112,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C7425202B062A0500AE76C0 /* HelpersView */ = {
+			isa = PBXGroup;
+			children = (
+				9C74251E2B0613E100AE76C0 /* TextEditorAppearance.swift */,
+				9C74251A2B0605F300AE76C0 /* EventEditorView.swift */,
+			);
+			path = HelpersView;
+			sourceTree = "<group>";
+		};
 		9C7F17DA2AFEAA7100BDCDDF = {
 			isa = PBXGroup;
 			children = (
@@ -96,10 +144,16 @@
 		9C7F17E52AFEAA7100BDCDDF /* EventsUpComing */ = {
 			isa = PBXGroup;
 			children = (
-				9C7F17E62AFEAA7100BDCDDF /* EventsUpComingApp.swift */,
+				9C7F182E2AFEC6E500BDCDDF /* Info.plist */,
+				9C7F18282AFEC41100BDCDDF /* Helpers */,
+				9C7F18242AFEBE8500BDCDDF /* App */,
+				9C7F18122AFEAB3100BDCDDF /* Coordinator */,
+				9C7F18192AFEAEF800BDCDDF /* Views */,
+				9CDDF9A62B039ADB00A75C0C /* Model */,
+				9C7F18312AFEC95E00BDCDDF /* ViewModel */,
+				9C7F18252AFEBE9000BDCDDF /* Resources */,
 				9C7F17E82AFEAA7100BDCDDF /* ContentView.swift */,
-				9C7F17EA2AFEAA7100BDCDDF /* Item.swift */,
-				9C7F17EC2AFEAA7200BDCDDF /* Assets.xcassets */,
+				9C7F17EA2AFEAA7100BDCDDF /* Todo.swift */,
 				9C7F17EE2AFEAA7200BDCDDF /* Preview Content */,
 			);
 			path = EventsUpComing;
@@ -128,6 +182,115 @@
 				9C7F18052AFEAA7200BDCDDF /* EventsUpComingUITestsLaunchTests.swift */,
 			);
 			path = EventsUpComingUITests;
+			sourceTree = "<group>";
+		};
+		9C7F18122AFEAB3100BDCDDF /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				9C7F18132AFEABB600BDCDDF /* Coordinator.swift */,
+				9C7F18152AFEAC0400BDCDDF /* ScreenPages.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		9C7F18172AFEAEE100BDCDDF /* EventsView */ = {
+			isa = PBXGroup;
+			children = (
+				9C7F181E2AFEB1F100BDCDDF /* EventListView.swift */,
+				9C7F18262AFEC1B900BDCDDF /* ButtonChoise.swift */,
+				9CDDF9A42B039AAF00A75C0C /* PeriodButtonsPicker.swift */,
+				9CDDF9A92B03B5E700A75C0C /* EventCell.swift */,
+				9CDDF9AD2B03CC9400A75C0C /* HeaderList.swift */,
+			);
+			path = EventsView;
+			sourceTree = "<group>";
+		};
+		9C7F18182AFEAEEE00BDCDDF /* SharedView */ = {
+			isa = PBXGroup;
+			children = (
+				9C7F181A2AFEAF2400BDCDDF /* SharedView.swift */,
+			);
+			path = SharedView;
+			sourceTree = "<group>";
+		};
+		9C7F18192AFEAEF800BDCDDF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9C7F18212AFEB30800BDCDDF /* Events */,
+				9C7F18202AFEB2D800BDCDDF /* CoordinatorView */,
+				9C7F18172AFEAEE100BDCDDF /* EventsView */,
+				9C7F18182AFEAEEE00BDCDDF /* SharedView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9C7F18202AFEB2D800BDCDDF /* CoordinatorView */ = {
+			isa = PBXGroup;
+			children = (
+				9C7F181C2AFEB03B00BDCDDF /* CoordinatorView.swift */,
+			);
+			path = CoordinatorView;
+			sourceTree = "<group>";
+		};
+		9C7F18212AFEB30800BDCDDF /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				9C7425202B062A0500AE76C0 /* HelpersView */,
+				9C7F18222AFEB31D00BDCDDF /* CreateEventsView.swift */,
+				9CA826772B04CC19004D5E2A /* EditEvents.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		9C7F18242AFEBE8500BDCDDF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9C7F17E62AFEAA7100BDCDDF /* EventsUpComingApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9C7F18252AFEBE9000BDCDDF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9C7F182B2AFEC5E600BDCDDF /* Fonts */,
+				9C7F17EC2AFEAA7200BDCDDF /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9C7F18282AFEC41100BDCDDF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9C7F18292AFEC42300BDCDDF /* Color+Extension.swift */,
+				9C7F182F2AFEC78800BDCDDF /* Font+Extension.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9C7F182B2AFEC5E600BDCDDF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9CDDF9AF2B03CDF300A75C0C /* Poppins-SemiBold.ttf */,
+				9C7F182C2AFEC5FF00BDCDDF /* Poppins-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		9C7F18312AFEC95E00BDCDDF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9C7F18322AFEC97B00BDCDDF /* EventListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9CDDF9A62B039ADB00A75C0C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9CDDF9AB2B03B88900A75C0C /* IventModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +397,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C7F182D2AFEC5FF00BDCDDF /* Poppins-Regular.ttf in Resources */,
+				9CDDF9B02B03CDF300A75C0C /* Poppins-SemiBold.ttf in Resources */,
 				9C7F17F02AFEAA7200BDCDDF /* Preview Assets.xcassets in Resources */,
 				9C7F17ED2AFEAA7200BDCDDF /* Assets.xcassets in Resources */,
 			);
@@ -260,9 +425,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CA826782B04CC19004D5E2A /* EditEvents.swift in Sources */,
+				9C7F18142AFEABB600BDCDDF /* Coordinator.swift in Sources */,
+				9C7F181D2AFEB03B00BDCDDF /* CoordinatorView.swift in Sources */,
+				9C7F18302AFEC78800BDCDDF /* Font+Extension.swift in Sources */,
+				9C7F18162AFEAC0400BDCDDF /* ScreenPages.swift in Sources */,
 				9C7F17E92AFEAA7100BDCDDF /* ContentView.swift in Sources */,
-				9C7F17EB2AFEAA7100BDCDDF /* Item.swift in Sources */,
+				9C7F18232AFEB31D00BDCDDF /* CreateEventsView.swift in Sources */,
+				9CDDF9A52B039AAF00A75C0C /* PeriodButtonsPicker.swift in Sources */,
+				9CDDF9AE2B03CC9400A75C0C /* HeaderList.swift in Sources */,
+				9CDDF9AA2B03B5E700A75C0C /* EventCell.swift in Sources */,
+				9C7F181B2AFEAF2400BDCDDF /* SharedView.swift in Sources */,
+				9C74251B2B0605F300AE76C0 /* EventEditorView.swift in Sources */,
+				9C74251F2B0613E100AE76C0 /* TextEditorAppearance.swift in Sources */,
+				9C7F17EB2AFEAA7100BDCDDF /* Todo.swift in Sources */,
 				9C7F17E72AFEAA7100BDCDDF /* EventsUpComingApp.swift in Sources */,
+				9CDDF9AC2B03B88900A75C0C /* IventModel.swift in Sources */,
+				9C7F18272AFEC1B900BDCDDF /* ButtonChoise.swift in Sources */,
+				9C7F18332AFEC97B00BDCDDF /* EventListViewModel.swift in Sources */,
+				9C7F182A2AFEC42300BDCDDF /* Color+Extension.swift in Sources */,
+				9C7F181F2AFEB1F100BDCDDF /* EventListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +611,7 @@
 				DEVELOPMENT_TEAM = P54RYJ8289;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EventsUpComing/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -458,6 +641,7 @@
 				DEVELOPMENT_TEAM = P54RYJ8289;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EventsUpComing/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
