@@ -4,13 +4,18 @@
 //
 //  Created by Yura Sabadin on 10.11.2023.
 //
-
+import SwiftData
 import SwiftUI
 
 struct EventListView: View {
     
     @EnvironmentObject var coordinator: Coordinator
     @EnvironmentObject var viewModel: EventListViewModel
+    //    @Query(filter: #Predicate<IventModel>{
+    //        let dateNow = Date.now
+    //        $0.date > dateNow && $0.date <= viewModel.endDate},
+    //           sort: \IventModel.date, order: .forward, animation: .smooth)
+    //        var events: [IventModel]
     
     init() {
         let appearance = UINavigationBarAppearance()
@@ -20,78 +25,52 @@ struct EventListView: View {
         ]
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
         UINavigationBar.appearance().standardAppearance = appearance
+        // _events = Query(filter: IventModel.currentPredicate(to: endDate),
+        //             sort: \IventModel.date, order: .forward, animation: .spring)
     }
     
     var body: some View {
         VStack(spacing: 10) {
             
-            PeriodButtonsPicker(selectedIndex: $viewModel.selectedIndexButton)
+            PeriodButtonsPicker(selectedIndex: $viewModel.selectedIndexButton, isDatePickerPresent: $viewModel.isDatePickerPresent)
             
-            if viewModel.selectedIndexButton == .custom {
-                
-                DatePicker("", selection: $viewModel.selectDate)
+            if viewModel.selectedIndexButton == .custom && viewModel.isDatePickerPresent {
+                DatePicker("", selection: $viewModel.selectDate, in: Date()...)
                     .datePickerStyle(.graphical)
             }
             
-            List {
-                Section(header: customHeader()) {
-                    ForEach($viewModel.arrayIvents) { item in
-                        EventCell(ivent: item)
-                            .onTapGesture {
-                                coordinator.present(sheet: .editIvent(item))
-                            }
+            QueryListView(viewModel: viewModel)
+                .navigationTitle("My Events")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button(action: {
+                            coordinator.present(sheet: .shared)
+                        }, label: {
+                            Image(systemName: "line.3.horizontal")
+                                .foregroundStyle(Color.indigo)
+                        })
                     }
-                    .onDelete(perform: viewModel.deleteIvent)
                 }
-                .listRowInsets(.init(top: 5, leading: 0, bottom: 5, trailing: 0))
-            }
-            .scrollContentBackground(.hidden)
-            .listStyle(.plain)
+            
+                .toolbar {
+                    ToolbarItem (placement: .topBarTrailing) {
+                        Button(action: {
+                            coordinator.present(sheet: .createEvent)
+                        }, label: {
+                            Image(systemName: "plus")
+                                .foregroundStyle(Color.indigo)
+                        })
+                    }
+                }
         }
         .padding()
-        .navigationTitle("My Events")
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .topBarLeading) {
-                Button(action: {
-                    coordinator.present(sheet: .shared)
-                }, label: {
-                    Image(systemName: "line.3.horizontal")
-                        .foregroundStyle(Color.indigo)
-                })
-            }
-        }
-        .toolbar {
-            ToolbarItem (placement: .topBarTrailing) {
-                Button(action: {
-                    coordinator.present(sheet: .createEvent)
-                }, label: {
-                    Image(systemName: "plus")
-                        .foregroundStyle(Color.indigo)
-                })
-            }
-        }
-    }
-    
-    
-    
-    @ViewBuilder
-    func customHeader() -> some View {
-        HStack {
-            Text(viewModel.headerTitle)
-                .font(.Inter.inter(.semibold, size: 20))
-                .foregroundStyle(.black)
-                .padding(.bottom, 10)
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
-
-
-#Preview {
-    NavigationStack {
-        EventListView()
-            .environmentObject(Coordinator())
-            .environmentObject(EventListViewModel())
-    }
-}
+//#Preview {
+//    NavigationStack {
+//        EventListView()
+//            .environmentObject(Coordinator())
+//            .environmentObject(EventListViewModel())
+//    }
+//}

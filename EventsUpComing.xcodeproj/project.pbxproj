@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		9C74251B2B0605F300AE76C0 /* EventEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C74251A2B0605F300AE76C0 /* EventEditorView.swift */; };
 		9C74251F2B0613E100AE76C0 /* TextEditorAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C74251E2B0613E100AE76C0 /* TextEditorAppearance.swift */; };
+		9C7425222B065E8B00AE76C0 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7425212B065E8B00AE76C0 /* Date+Extension.swift */; };
+		9C7425252B06894700AE76C0 /* SwitDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7425242B06894700AE76C0 /* SwitDataManager.swift */; };
+		9C7425272B076FD000AE76C0 /* QueryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7425262B076FD000AE76C0 /* QueryListView.swift */; };
 		9C7F17E72AFEAA7100BDCDDF /* EventsUpComingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F17E62AFEAA7100BDCDDF /* EventsUpComingApp.swift */; };
 		9C7F17E92AFEAA7100BDCDDF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F17E82AFEAA7100BDCDDF /* ContentView.swift */; };
 		9C7F17EB2AFEAA7100BDCDDF /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F17EA2AFEAA7100BDCDDF /* Todo.swift */; };
@@ -56,6 +59,9 @@
 /* Begin PBXFileReference section */
 		9C74251A2B0605F300AE76C0 /* EventEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEditorView.swift; sourceTree = "<group>"; };
 		9C74251E2B0613E100AE76C0 /* TextEditorAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditorAppearance.swift; sourceTree = "<group>"; };
+		9C7425212B065E8B00AE76C0 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		9C7425242B06894700AE76C0 /* SwitDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitDataManager.swift; sourceTree = "<group>"; };
+		9C7425262B076FD000AE76C0 /* QueryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryListView.swift; sourceTree = "<group>"; };
 		9C7F17E32AFEAA7100BDCDDF /* EventsUpComing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventsUpComing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C7F17E62AFEAA7100BDCDDF /* EventsUpComingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsUpComingApp.swift; sourceTree = "<group>"; };
 		9C7F17E82AFEAA7100BDCDDF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -121,6 +127,14 @@
 			path = HelpersView;
 			sourceTree = "<group>";
 		};
+		9C7425232B06893200AE76C0 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				9C7425242B06894700AE76C0 /* SwitDataManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		9C7F17DA2AFEAA7100BDCDDF = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +158,7 @@
 		9C7F17E52AFEAA7100BDCDDF /* EventsUpComing */ = {
 			isa = PBXGroup;
 			children = (
+				9C7425232B06893200AE76C0 /* Managers */,
 				9C7F182E2AFEC6E500BDCDDF /* Info.plist */,
 				9C7F18282AFEC41100BDCDDF /* Helpers */,
 				9C7F18242AFEBE8500BDCDDF /* App */,
@@ -197,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				9C7F181E2AFEB1F100BDCDDF /* EventListView.swift */,
+				9C7425262B076FD000AE76C0 /* QueryListView.swift */,
 				9C7F18262AFEC1B900BDCDDF /* ButtonChoise.swift */,
 				9CDDF9A42B039AAF00A75C0C /* PeriodButtonsPicker.swift */,
 				9CDDF9A92B03B5E700A75C0C /* EventCell.swift */,
@@ -264,6 +280,7 @@
 			children = (
 				9C7F18292AFEC42300BDCDDF /* Color+Extension.swift */,
 				9C7F182F2AFEC78800BDCDDF /* Font+Extension.swift */,
+				9C7425212B065E8B00AE76C0 /* Date+Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -435,8 +452,11 @@
 				9CDDF9A52B039AAF00A75C0C /* PeriodButtonsPicker.swift in Sources */,
 				9CDDF9AE2B03CC9400A75C0C /* HeaderList.swift in Sources */,
 				9CDDF9AA2B03B5E700A75C0C /* EventCell.swift in Sources */,
+				9C7425272B076FD000AE76C0 /* QueryListView.swift in Sources */,
 				9C7F181B2AFEAF2400BDCDDF /* SharedView.swift in Sources */,
+				9C7425222B065E8B00AE76C0 /* Date+Extension.swift in Sources */,
 				9C74251B2B0605F300AE76C0 /* EventEditorView.swift in Sources */,
+				9C7425252B06894700AE76C0 /* SwitDataManager.swift in Sources */,
 				9C74251F2B0613E100AE76C0 /* TextEditorAppearance.swift in Sources */,
 				9C7F17EB2AFEAA7100BDCDDF /* Todo.swift in Sources */,
 				9C7F17E72AFEAA7100BDCDDF /* EventsUpComingApp.swift in Sources */,

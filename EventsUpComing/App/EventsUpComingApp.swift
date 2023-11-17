@@ -10,25 +10,32 @@ import SwiftData
 
 @main
 struct EventsUpComingApp: App {
+    let container: ModelContainer
+    @StateObject var eventsViewModel: EventListViewModel
     
-    
-    var sharedModelContainer: ModelContainer = {
+    init() {
         let schema = Schema([
-            Todo.self,
+            IventModel.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
+        
         do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
+            container = try ModelContainer(for: schema, configurations: [modelConfiguration])
+            let viewModel = EventListViewModel(context: container.mainContext)
+            _eventsViewModel = StateObject(wrappedValue: viewModel)
+            
         } catch {
             fatalError("Could not create ModelContainer: \(error)")
         }
-    }()
-
+    }
+    
+    
     var body: some Scene {
         WindowGroup {
             CoordinatorView()
         }
-        .modelContainer(sharedModelContainer)
+        .modelContainer(container)
+        .environmentObject(eventsViewModel)
+        
     }
 }

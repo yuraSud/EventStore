@@ -4,57 +4,59 @@
 //
 //  Created by Yura Sabadin on 15.11.2023.
 //
-
+import SwiftData
 import SwiftUI
 
 struct EditEvents: View {
-   
+    
     @EnvironmentObject var coordinator: Coordinator
     @EnvironmentObject var viewModel: EventListViewModel
-    @Binding var iventModel: IventModel
+    var index: Int
     @State var isEventChanged = false
+    @State var model = IventModel(title: "")
+    
+    
+    init(iventModelIndex: Int) {
+        self.index = iventModelIndex
+    }
     
     var body: some View {
         VStack {
             HStack {
-                Button("Cancel", action: coordinator.dismissSheet)
+                Button("Delete", action: deleteEvent)
                 
                 Spacer()
                 
-                Text(iventModel.title).font(.headline)
+                Text(model.title).font(.headline)
                 
                 Spacer()
                 
-                Button("Save", action: saveIvent)
-                    .disabled(!isEventChanged)
-                
-                
+                Button("Ok", action: coordinator.dismissSheet)
+                   
             }.padding(.horizontal)
             
             Divider().padding(.horizontal)
             
-            TextField("name", text: $iventModel.title)
-            
             Form {
-                EventEditorView(title: $iventModel.title, note: $iventModel.notes, date: $iventModel.date)
+                EventEditorView(title: $model.title, note: $model.notes, date: $model.date)
             }
             .shadow(radius: 10)
             .scrollContentBackground(.hidden)
         }
-//        .onChange(of: $iventModel, { oldValue, newValue in
-//            isEventChanged = true
-//        })
         .padding()
+        .onAppear{
+            self.model = viewModel.events[index]
+        }
     }
     
-    func saveIvent() {
-       // viewModel.addIvent()
+    func deleteEvent() {
+        viewModel.deleteIvent(event: model)
         coordinator.dismissSheet()
     }
 }
 
-#Preview {
-    EditEvents(iventModel: .constant(IventModel(title: "Yura", notes: "Meet soon")))
-        .environmentObject(Coordinator())
-        .environmentObject(EventListViewModel())
-}
+//#Preview {
+//    EditEvents(iventModelIndex: 2)
+//        .environmentObject(Coordinator())
+//        .environmentObject(EventListViewModel())
+//}

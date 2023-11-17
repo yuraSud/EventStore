@@ -50,8 +50,8 @@ class Coordinator: ObservableObject {
     }
     
     @ViewBuilder
-    func build(sheet: Sheets, iventModel: Binding<IventModel>) -> some View {
-        EditEvents(iventModel: iventModel)
+    func build(sheet: Sheets, iventModelIndex: Int) -> some View {
+        EditEvents(iventModelIndex: iventModelIndex)
     }
     
     @ViewBuilder

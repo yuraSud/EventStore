@@ -8,12 +8,8 @@
 import SwiftUI
 
 struct CoordinatorView: View {
-    @State var arrayIvents: [IventModel] = [
-        IventModel(title: "Ivent"),
-        IventModel(title: "Ivent two"),
-        IventModel(title: "Ivent three", notes: "Soon meet"),
-    ]
-    @StateObject var eventsViewModel = EventListViewModel()
+    
+//    @StateObject var eventsViewModel = EventListViewModel(context:)
     @StateObject var coordinator = Coordinator()
     
     var body: some View {
@@ -33,16 +29,13 @@ struct CoordinatorView: View {
                         coordinator.build(sheet: sheet)
                     case .shared:
                         coordinator.build(sheet: sheet)
-                    case .editIvent(let iventmodel):
-                        coordinator.build(sheet: sheet, iventModel: iventmodel)
+                    case .editIvent(let iventmodelIndex):
+                        coordinator.build(sheet: sheet, iventModelIndex: iventmodelIndex)
                     }
-                }
-                .onAppear{
-                    eventsViewModel.arrayIvents = arrayIvents
                 }
         }
         .environmentObject(coordinator)
-        .environmentObject(eventsViewModel)
+//        .environmentObject(eventsViewModel)
     }
 }
 

@@ -9,13 +9,13 @@ import SwiftUI
 
 struct EventCell: View {
     
-    @Binding var ivent : IventModel
+    var ivent : IventModel
     
     var body: some View {
         HStack {
             Text(ivent.title)
             Spacer()
-            Text(ivent.date.description)  //TODO: добавить расчет времени от сегодняшней даты до даты запланированной
+            Text(ivent.date.calculateTimeDifference(to: .now))  //TODO: добавить расчет времени от сегодняшней даты до даты запланированной
                 .foregroundStyle(.indigo)
         }
         .padding(.horizontal)
@@ -29,5 +29,5 @@ struct EventCell: View {
 }
 
 #Preview {
-    EventCell(ivent: .constant(IventModel(title: "Ivent")))
+    EventCell(ivent: IventModel(title: "Ivent"))
 }

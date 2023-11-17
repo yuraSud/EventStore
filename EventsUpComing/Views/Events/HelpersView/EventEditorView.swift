@@ -21,7 +21,7 @@ struct EventEditorView: View {
                 TextEditorAppearance(textInTextEditor: $note)
                 
                 Divider()
-                DatePicker("Choise date:", selection: $date, displayedComponents: .date)
+                DatePicker("Choise date:", selection: $date, in: Date()..., displayedComponents: .date)
                     .padding([.bottom, .trailing])
             }
             .autocorrectionDisabled()

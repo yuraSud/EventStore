@@ -10,6 +10,7 @@ import SwiftUI
 struct PeriodButtonsPicker: View {
    
     @Binding var selectedIndex: Period
+    @Binding var isDatePickerPresent: Bool
     
     var body: some View {
         HStack(spacing: 10) {
@@ -18,6 +19,9 @@ struct PeriodButtonsPicker: View {
                     .onTapGesture {
                         withAnimation(.snappy) {
                             selectedIndex = item
+                            if item == .custom {
+                                isDatePickerPresent.toggle()
+                            }
                         }
                         
                     }
@@ -27,5 +31,5 @@ struct PeriodButtonsPicker: View {
 }
 
 #Preview {
-    PeriodButtonsPicker(selectedIndex: .constant(.month))
+    PeriodButtonsPicker(selectedIndex: .constant(.month), isDatePickerPresent: .constant(true))
 }
