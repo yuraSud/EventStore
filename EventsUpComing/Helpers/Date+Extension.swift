@@ -69,5 +69,13 @@ extension Date {
         return currentDate.compare(self) == .orderedDescending ? true : false
     }
     
+    func addOneMounth() -> Date {
+        let calendar = Calendar.current
+        var oneMonthFromNowComponents = DateComponents()
+        oneMonthFromNowComponents.month = 2
+        let oneMonthFromNow = calendar.date(byAdding: oneMonthFromNowComponents, to: self, wrappingComponents: false)
+        return oneMonthFromNow ?? Date()
+    }
+    
     
 }

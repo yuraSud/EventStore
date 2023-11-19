@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C43661B2B091831009E8348 /* EventKitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C43661A2B091831009E8348 /* EventKitViewModel.swift */; };
 		9C74251B2B0605F300AE76C0 /* EventEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C74251A2B0605F300AE76C0 /* EventEditorView.swift */; };
 		9C74251F2B0613E100AE76C0 /* TextEditorAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C74251E2B0613E100AE76C0 /* TextEditorAppearance.swift */; };
 		9C7425222B065E8B00AE76C0 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7425212B065E8B00AE76C0 /* Date+Extension.swift */; };
@@ -57,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C43661A2B091831009E8348 /* EventKitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventKitViewModel.swift; sourceTree = "<group>"; };
 		9C74251A2B0605F300AE76C0 /* EventEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEditorView.swift; sourceTree = "<group>"; };
 		9C74251E2B0613E100AE76C0 /* TextEditorAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditorAppearance.swift; sourceTree = "<group>"; };
 		9C7425212B065E8B00AE76C0 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				9C7F18322AFEC97B00BDCDDF /* EventListViewModel.swift */,
+				9C43661A2B091831009E8348 /* EventKitViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				9C7F17E92AFEAA7100BDCDDF /* ContentView.swift in Sources */,
 				9C7F18232AFEB31D00BDCDDF /* CreateEventsView.swift in Sources */,
 				9CDDF9A52B039AAF00A75C0C /* PeriodButtonsPicker.swift in Sources */,
+				9C43661B2B091831009E8348 /* EventKitViewModel.swift in Sources */,
 				9CDDF9AE2B03CC9400A75C0C /* HeaderList.swift in Sources */,
 				9CDDF9AA2B03B5E700A75C0C /* EventCell.swift in Sources */,
 				9C7425272B076FD000AE76C0 /* QueryListView.swift in Sources */,

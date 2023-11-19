@@ -23,6 +23,7 @@ struct QueryListView: View {
     var body: some View {
         
         List {
+            
             Section(header: customHeader()) {
                 ForEach( 0..<events.count, id: \.self) { index in
                     EventCell(ivent: events[index])
@@ -44,6 +45,8 @@ struct QueryListView: View {
         .onChange(of: events) { oldValue, newValue in
             viewModel.events = self.events
         }
+        
+        .onAppear{viewModel.events = self.events}
     }
     
     @ViewBuilder

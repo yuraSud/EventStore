@@ -44,12 +44,23 @@ struct EventListView: View {
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .topBarLeading) {
-                        Button(action: {
-                            coordinator.present(sheet: .shared)
-                        }, label: {
+                        Menu{
+                            Button(action: {
+                                coordinator.present(sheet: .shared)
+                            }, label: {
+                                Label("Share", systemImage: "square.and.arrow.up")
+                            })
+                            
+                            Button(action: {
+                                viewModel.getAllEventsFromCalendar()
+                            }, label: {
+                                Label("Get events from Calendar", systemImage: "ellipsis.circle")
+                            })
+                        } label: {
                             Image(systemName: "line.3.horizontal")
-                                .foregroundStyle(Color.indigo)
-                        })
+                                .foregroundStyle(.indigo)
+                        }
+                        
                     }
                 }
             

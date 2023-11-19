@@ -8,6 +8,7 @@ import Combine
 import SwiftUI
 import SwiftData
 
+
 enum Period: Int, CaseIterable, Identifiable {
     case week
     case month
@@ -27,8 +28,7 @@ enum Period: Int, CaseIterable, Identifiable {
 }
 
 class EventListViewModel: ObservableObject {
-    
-    
+    @State var eventViewModel = EventKitViewModel()
     var events: [IventModel] = []
     var context: ModelContext
     
@@ -116,6 +116,20 @@ class EventListViewModel: ObservableObject {
         title = ""
         notes = ""
         date = .now
+    }
+    
+    func getAllEventsFromCalendar() {
+        eventViewModel.insertEventsFromCalendar()
+       let arrayEvents = eventViewModel.eventsFromCalendar
+        if !arrayEvents.isEmpty {
+            for newEvent in arrayEvents {
+                if !events.contains(where: { event in
+                    return newEvent.title == event.title}) {
+                    context.insert(newEvent)
+                }
+            }
+            eventViewModel.eventsFromCalendar = []
+        }
     }
     
     func deleteIvent(event: IventModel) {

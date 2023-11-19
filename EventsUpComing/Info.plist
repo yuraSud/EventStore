@@ -7,5 +7,9 @@
 		<string>Poppins-Regular.ttf</string>
 		<string>Poppins-SemiBold.ttf</string>
 	</array>
+	<key>NSCalendarsFullAccessUsageDescription</key>
+	<string>Give me full access</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Give usage description</string>
 </dict>
 </plist>
