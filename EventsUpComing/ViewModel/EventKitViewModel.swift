@@ -48,6 +48,7 @@ class EventKitViewModel {
             let description = ""
             
             let newEvent = IventModel(title: title, notes: description, date: date)
+           
             eventsFromCalendar.append(newEvent)
         }
     }

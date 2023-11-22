@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct CoordinatorView: View {
-    
-//    @StateObject var eventsViewModel = EventListViewModel(context:)
+
     @StateObject var coordinator = Coordinator()
     
     var body: some View {
@@ -35,7 +34,6 @@ struct CoordinatorView: View {
                 }
         }
         .environmentObject(coordinator)
-//        .environmentObject(eventsViewModel)
     }
 }
 

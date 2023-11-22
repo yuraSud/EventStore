@@ -11,7 +11,7 @@ class Coordinator: ObservableObject {
     
     @Published var path = NavigationPath() 
     @Published var sheet: Sheets?
-    @EnvironmentObject var viewModel: EventListViewModel
+    @Environment(EventViewModel.self) var viewModel
     
     
     func push(page: Page) {

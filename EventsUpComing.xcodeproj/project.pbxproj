@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9C43661B2B091831009E8348 /* EventKitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C43661A2B091831009E8348 /* EventKitViewModel.swift */; };
+		9C4366322B0DF3E7009E8348 /* EventDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4366312B0DF3E7009E8348 /* EventDataSource.swift */; };
+		9C4366342B0DF6B1009E8348 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4366332B0DF6B1009E8348 /* EventViewModel.swift */; };
 		9C74251B2B0605F300AE76C0 /* EventEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C74251A2B0605F300AE76C0 /* EventEditorView.swift */; };
 		9C74251F2B0613E100AE76C0 /* TextEditorAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C74251E2B0613E100AE76C0 /* TextEditorAppearance.swift */; };
 		9C7425222B065E8B00AE76C0 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7425212B065E8B00AE76C0 /* Date+Extension.swift */; };
@@ -59,6 +61,8 @@
 
 /* Begin PBXFileReference section */
 		9C43661A2B091831009E8348 /* EventKitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventKitViewModel.swift; sourceTree = "<group>"; };
+		9C4366312B0DF3E7009E8348 /* EventDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDataSource.swift; sourceTree = "<group>"; };
+		9C4366332B0DF6B1009E8348 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		9C74251A2B0605F300AE76C0 /* EventEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEditorView.swift; sourceTree = "<group>"; };
 		9C74251E2B0613E100AE76C0 /* TextEditorAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditorAppearance.swift; sourceTree = "<group>"; };
 		9C7425212B065E8B00AE76C0 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -301,6 +305,8 @@
 			children = (
 				9C7F18322AFEC97B00BDCDDF /* EventListViewModel.swift */,
 				9C43661A2B091831009E8348 /* EventKitViewModel.swift */,
+				9C4366312B0DF3E7009E8348 /* EventDataSource.swift */,
+				9C4366332B0DF6B1009E8348 /* EventViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -466,7 +472,9 @@
 				9C7F17E72AFEAA7100BDCDDF /* EventsUpComingApp.swift in Sources */,
 				9CDDF9AC2B03B88900A75C0C /* IventModel.swift in Sources */,
 				9C7F18272AFEC1B900BDCDDF /* ButtonChoise.swift in Sources */,
+				9C4366322B0DF3E7009E8348 /* EventDataSource.swift in Sources */,
 				9C7F18332AFEC97B00BDCDDF /* EventListViewModel.swift in Sources */,
+				9C4366342B0DF6B1009E8348 /* EventViewModel.swift in Sources */,
 				9C7F182A2AFEC42300BDCDDF /* Color+Extension.swift in Sources */,
 				9C7F181F2AFEB1F100BDCDDF /* EventListView.swift in Sources */,
 			);

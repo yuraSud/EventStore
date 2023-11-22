@@ -6,16 +6,12 @@
 //
 import SwiftData
 import SwiftUI
+import Observation
 
 struct EventListView: View {
     
     @EnvironmentObject var coordinator: Coordinator
-    @EnvironmentObject var viewModel: EventListViewModel
-    //    @Query(filter: #Predicate<IventModel>{
-    //        let dateNow = Date.now
-    //        $0.date > dateNow && $0.date <= viewModel.endDate},
-    //           sort: \IventModel.date, order: .forward, animation: .smooth)
-    //        var events: [IventModel]
+    @EnvironmentObject var viewModel: EventViewModel
     
     init() {
         let appearance = UINavigationBarAppearance()
@@ -25,14 +21,12 @@ struct EventListView: View {
         ]
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
         UINavigationBar.appearance().standardAppearance = appearance
-        // _events = Query(filter: IventModel.currentPredicate(to: endDate),
-        //             sort: \IventModel.date, order: .forward, animation: .spring)
     }
     
     var body: some View {
         VStack(spacing: 10) {
             
-            PeriodButtonsPicker(selectedIndex: $viewModel.selectedIndexButton, isDatePickerPresent: $viewModel.isDatePickerPresent)
+            PeriodButtonsPicker(selectedIndexButton: $viewModel.selectedIndexButton, isDatePickerPresent: $viewModel.isDatePickerPresent)
             
             if viewModel.selectedIndexButton == .custom && viewModel.isDatePickerPresent {
                 DatePicker("", selection: $viewModel.selectDate, in: Date()...)

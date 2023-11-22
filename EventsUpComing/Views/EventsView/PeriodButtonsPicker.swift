@@ -4,32 +4,32 @@
 //
 //  Created by Yura Sabadin on 14.11.2023.
 //
-
+import Observation
 import SwiftUI
 
 struct PeriodButtonsPicker: View {
-   
-    @Binding var selectedIndex: Period
+
+    @Binding var selectedIndexButton: Period
     @Binding var isDatePickerPresent: Bool
-    
+   
     var body: some View {
+        
         HStack(spacing: 10) {
             ForEach(Period.allCases) { item in
-                ButtonChoise(title: item.title, isTaped: selectedIndex == item)
+                ButtonChoise(title: item.title, isTaped: selectedIndexButton == item)
                     .onTapGesture {
                         withAnimation(.snappy) {
-                            selectedIndex = item
+                            selectedIndexButton = item
                             if item == .custom {
                                 isDatePickerPresent.toggle()
                             }
                         }
-                        
-                    }
+                }
             }
         }
     }
 }
 
 #Preview {
-    PeriodButtonsPicker(selectedIndex: .constant(.month), isDatePickerPresent: .constant(true))
+    PeriodButtonsPicker(selectedIndexButton: .constant(.month), isDatePickerPresent: .constant(true))
 }
