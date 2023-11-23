@@ -4,35 +4,25 @@
 //
 //  Created by Yura Sabadin on 17.11.2023.
 //
-import SwiftData
 import SwiftUI
 
 struct QueryListView: View {
-    @EnvironmentObject var coordinator: Coordinator
-    @Environment(\.modelContext) var context
-    @Query var events: [IventModel]
-    let viewModel: EventListViewModel
     
-    init(viewModel: EventListViewModel) {
-        self.viewModel = viewModel
-        _events = Query(filter: IventModel.currentPredicate(to: viewModel.endDate),
-                        sort: \IventModel.date, order: .forward, animation: .spring)
-        
-    }
+    @EnvironmentObject var viewModel: EventViewModel
+    @EnvironmentObject var coordinator: Coordinator
     
     var body: some View {
         
         List {
-            
             Section(header: customHeader()) {
-                ForEach( 0..<events.count, id: \.self) { index in
-                    EventCell(ivent: events[index])
+                ForEach( viewModel.events, id: \.self) { event in
+                    EventCell(ivent: event)
                         .onTapGesture {
-                            coordinator.present(sheet: .editIvent(index))
+                            coordinator.present(sheet: .editIvent(event))
                         }
                         .swipeActions {
                             Button("Delete", role: .destructive) {
-                                context.delete(events[index])
+                                viewModel.removeEvent(event)
                             }
                         }
                 }
@@ -41,16 +31,10 @@ struct QueryListView: View {
         }
         .scrollContentBackground(.hidden)
         .listStyle(.plain)
-        
-        .onChange(of: events) { oldValue, newValue in
-            viewModel.events = self.events
-        }
-        
-        .onAppear{viewModel.events = self.events}
     }
     
     @ViewBuilder
-    func customHeader() -> some View {
+    private func customHeader() -> some View {
         HStack {
             Text(viewModel.headerTitle)
                 .font(.Inter.inter(.semibold, size: 20))
@@ -59,16 +43,10 @@ struct QueryListView: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
     }
-    
-    func delete(at offsets: IndexSet) {
-        for i in offsets.makeIterator() {
-            let theItem = events[i]
-            context.delete(theItem)
-        }
-    }
 }
 
-
-//#Preview {
-//    QueryListView()
-//}
+#Preview {
+    QueryListView()
+        .environmentObject(Coordinator())
+        .environmentObject(EventViewModel())
+}

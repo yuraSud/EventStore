@@ -10,14 +10,18 @@ import SwiftUI
 struct EditEvents: View {
     
     @EnvironmentObject var coordinator: Coordinator
-    @EnvironmentObject var viewModel: EventListViewModel
-    var index: Int
+    @EnvironmentObject var viewModel: EventViewModel
+  //  var index: Int
     @State var isEventChanged = false
-    @State var model = IventModel(title: "")
+    @State var model: IventModel//(title: "")
     
     
-    init(iventModelIndex: Int) {
-        self.index = iventModelIndex
+//    init(iventModelIndex: Int) {
+//        self.index = iventModelIndex
+//    }
+    
+    init(iventModel: IventModel) {
+        _model = State(initialValue: iventModel)
     }
     
     var body: some View {
@@ -45,12 +49,12 @@ struct EditEvents: View {
         }
         .padding()
         .onAppear{
-            self.model = viewModel.events[index]
+          //  self.model = viewModel.events[index]
         }
     }
     
     func deleteEvent() {
-        viewModel.deleteIvent(event: model)
+        viewModel.removeEvent(model)
         coordinator.dismissSheet()
     }
 }

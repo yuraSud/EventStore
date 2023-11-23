@@ -11,7 +11,7 @@ class Coordinator: ObservableObject {
     
     @Published var path = NavigationPath() 
     @Published var sheet: Sheets?
-    @Environment(EventViewModel.self) var viewModel
+    @EnvironmentObject var viewModel: EventViewModel
     
     
     func push(page: Page) {
@@ -35,7 +35,7 @@ class Coordinator: ObservableObject {
     }
     
     func addIvent(ivent: IventModel) {
-        viewModel.arrayIvents.append(ivent)
+        viewModel.appendEvent(event: ivent)
     }
     
     
@@ -50,8 +50,8 @@ class Coordinator: ObservableObject {
     }
     
     @ViewBuilder
-    func build(sheet: Sheets, iventModelIndex: Int) -> some View {
-        EditEvents(iventModelIndex: iventModelIndex)
+    func build(sheet: Sheets, iventModelIndex: IventModel) -> some View {
+        EditEvents(iventModel: iventModelIndex)
     }
     
     @ViewBuilder

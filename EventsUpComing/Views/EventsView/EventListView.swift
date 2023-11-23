@@ -33,7 +33,7 @@ struct EventListView: View {
                     .datePickerStyle(.graphical)
             }
             
-            QueryListView(viewModel: viewModel)
+            QueryListView()
                 .navigationTitle("My Events")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {

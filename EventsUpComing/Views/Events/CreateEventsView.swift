@@ -9,9 +9,9 @@ import SwiftUI
 
 struct CreateEventsView: View {
     
-    @Environment(\.modelContext) var context
     @EnvironmentObject var coordinator: Coordinator
-    @EnvironmentObject var viewModel: EventListViewModel
+    @EnvironmentObject var viewModel: EventViewModel
+    
     var title: String {
         viewModel.title.isEmpty ? "New Title" : viewModel.title
     }
@@ -27,8 +27,11 @@ struct CreateEventsView: View {
                 
                 Spacer()
                 
-                Button("Add", action: saveIvent)
-                    .disabled(!viewModel.newEventIsDisable)
+                Button("Add") {
+                    viewModel.addNewIvent()
+                    coordinator.dismissSheet()
+                }
+                .disabled(!viewModel.newEventIsDisable)
                 
                 
             }.padding(.horizontal)
@@ -42,19 +45,6 @@ struct CreateEventsView: View {
             .scrollContentBackground(.hidden)
         }
         .padding()
-    }
-    
-    func saveIvent() {
-//        let newIvent = IventModel(title: viewModel.title, notes: viewModel.notes, date: viewModel.date)
-//        context.insert(newIvent)
-        viewModel.addIvent()
-        coordinator.dismissSheet()
-    }
-    
-    func addIvent() {
-//        let newIvent = IventModel(title: viewModel.title, notes: viewModel.notes, date: viewModel.date)
-//        context.insert(newIvent)
-//        arrayIvents.append(newIvent)
     }
 }
 

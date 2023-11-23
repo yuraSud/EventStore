@@ -27,20 +27,9 @@ enum Sheets: Hashable, Equatable, Identifiable {
     
     case createEvent
     case shared
-    case editIvent(Int)
+    case editIvent(IventModel)
     
     var id: Self {
         self
     }
-    
-//    func hash(into hasher: inout Hasher) {
-//        switch self {
-//        case .createEvent:
-//            hasher.combine(0)
-//        case .shared:
-//            hasher.combine(1)
-//        case let .editIvent(binding):
-//            hasher.combine(binding.wrappedValue)
-//        }
-//    }
 }

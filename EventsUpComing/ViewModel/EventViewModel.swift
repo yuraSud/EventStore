@@ -12,8 +12,13 @@ class EventViewModel: ObservableObject {
     var eventKitViewModel = EventKitViewModel()
     
     private let dataSource: EventDataSource
+    private var allEventsInDatabase: [IventModel] = []
     
-    @Published var events: [IventModel] = []
+    @Published var events: [IventModel] = [] {
+        didSet {
+            print(events.count, "count")
+        }
+    }
     
     private var cancellable = Set<AnyCancellable>()
     
@@ -21,13 +26,17 @@ class EventViewModel: ObservableObject {
     @Published var selectedIndexButton: Period = .week {
         didSet {
             self.headerTitle = self.createHeaderTitle(from: .now)
+            print(headerTitle)
+            self.events = dataSource.fetchIvents(predicate: predicateFilter)
         }
     }
-    @Published var arrayIvents: [IventModel] = []
+   
     @Published var headerTitle = ""
     @Published var selectDate: Date = Date() {
         didSet {
             self.headerTitle = self.createHeaderTitle(from: .now)
+            print(headerTitle)
+            self.events = dataSource.fetchIvents(predicate: predicateFilter)
         }
     }
     
@@ -38,7 +47,7 @@ class EventViewModel: ObservableObject {
     
     init(dataSource: EventDataSource = EventDataSource.shared) {
         self.dataSource = dataSource
-        self.events = dataSource.fetchIvents()
+        self.events = dataSource.fetchIvents(predicate: predicateFilter)
         headerTitle = createHeaderTitle(from: .now)
         sinkToProperties()
     }
@@ -72,18 +81,14 @@ class EventViewModel: ObservableObject {
         return date
     }
     
+   // _events = Query(filter: IventModel.currentPredicate(to: viewModel.endDate),
+    //                        sort: \IventModel.date, order: .forward, animation: .spring)
+    //
+    
     var predicateFilter: Predicate<IventModel> {
         let dateNow = Date.now
         return #Predicate<IventModel> { event in
             event.date > dateNow && event.date <= endDate
-        }
-    }
-    
-    static func currentPredicate() -> Predicate<IventModel> {
-        let currentDate = Date.now
-        
-        return #Predicate<IventModel> { event in
-            event.date > currentDate
         }
     }
     
@@ -103,11 +108,12 @@ class EventViewModel: ObservableObject {
     }
     
     func getAllEventsFromCalendar() {
+        allEventsInDatabase = dataSource.fetchIvents()
         eventKitViewModel.insertEventsFromCalendar()
         let arrayEvents = eventKitViewModel.eventsFromCalendar
         if !arrayEvents.isEmpty {
             for newEvent in arrayEvents {
-                if !events.contains(where: { newEvent.title == $0.title}) {
+                if !allEventsInDatabase.contains(where: { newEvent.title == $0.title}) {
                     appendEvent(event: newEvent)
                 }
             }
@@ -131,6 +137,7 @@ class EventViewModel: ObservableObject {
     
     func appendEvent(event: IventModel) {
         dataSource.appendIvent(ivent: event)
+        self.events = dataSource.fetchIvents(predicate: predicateFilter)
     }
     
     func removeEvent(_ event: IventModel) {

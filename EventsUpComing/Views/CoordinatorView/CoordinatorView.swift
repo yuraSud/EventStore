@@ -28,8 +28,8 @@ struct CoordinatorView: View {
                         coordinator.build(sheet: sheet)
                     case .shared:
                         coordinator.build(sheet: sheet)
-                    case .editIvent(let iventmodelIndex):
-                        coordinator.build(sheet: sheet, iventModelIndex: iventmodelIndex)
+                    case .editIvent(let iventmodel):
+                        coordinator.build(sheet: sheet, iventModelIndex: iventmodel)
                     }
                 }
         }

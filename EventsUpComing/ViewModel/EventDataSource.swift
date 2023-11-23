@@ -39,9 +39,12 @@ final class EventDataSource {
 //        }
     }
 
-    func fetchIvents() -> [IventModel] {
+    func fetchIvents(predicate: Predicate<IventModel> = .true) -> [IventModel] {
+        
+        let fetchDescriptor = FetchDescriptor<IventModel>(predicate: predicate, sortBy: [.init(\.date, order: .forward)])
+        
         do {
-            return try modelContext.fetch(FetchDescriptor<IventModel>())
+            return try modelContext.fetch(fetchDescriptor)
         } catch {
             fatalError(error.localizedDescription)
         }
