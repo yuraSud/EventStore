@@ -42,7 +42,7 @@ struct EventListView: View {
                             Button(action: {
                                 coordinator.present(sheet: .shared)
                             }, label: {
-                                Label("Share", systemImage: "square.and.arrow.up")
+                                Label("Scan QRCode", systemImage: "qrcode.viewfinder")
                             })
                             
                             Button(action: {

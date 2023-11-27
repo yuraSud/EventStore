@@ -12,7 +12,7 @@ class EventViewModel: ObservableObject {
     var eventKitViewModel = EventKitViewModel()
     
     private let dataSource: EventDataSource
-    private var allEventsInDatabase: [IventModel] = []
+    var allEventsInDatabase: [IventModel] = []
     
     @Published var events: [IventModel] = [] {
         didSet {
@@ -50,6 +50,7 @@ class EventViewModel: ObservableObject {
         self.events = dataSource.fetchIvents(predicate: predicateFilter)
         headerTitle = createHeaderTitle(from: .now)
         sinkToProperties()
+        getAllEvents()
     }
     
     var addButtonIsDisabled: AnyPublisher<Bool, Never> {
@@ -81,10 +82,6 @@ class EventViewModel: ObservableObject {
         return date
     }
     
-   // _events = Query(filter: IventModel.currentPredicate(to: viewModel.endDate),
-    //                        sort: \IventModel.date, order: .forward, animation: .spring)
-    //
-    
     var predicateFilter: Predicate<IventModel> {
         let dateNow = Date.now
         return #Predicate<IventModel> { event in
@@ -99,6 +96,12 @@ class EventViewModel: ObservableObject {
         .store(in: &cancellable)
     }
     
+    func eventFromQR(event: IventModel) {
+        title = event.title
+        notes = event.notes
+        date = event.date
+    }
+    
     func addNewIvent() {
         let newIvent = IventModel(title: title, notes: notes, date: date)
         appendEvent(event: newIvent)
@@ -107,6 +110,10 @@ class EventViewModel: ObservableObject {
         date = .now
     }
     
+    func getAllEvents() {
+        allEventsInDatabase = dataSource.fetchIvents()
+    }
+        
     func getAllEventsFromCalendar() {
         allEventsInDatabase = dataSource.fetchIvents()
         eventKitViewModel.insertEventsFromCalendar()
@@ -140,10 +147,11 @@ class EventViewModel: ObservableObject {
         self.events = dataSource.fetchIvents(predicate: predicateFilter)
     }
     
-    func removeEvent(_ event: IventModel) {
+     func removeEvent(_ event: IventModel) {
         dataSource.removeIvent(event)
-        guard let index = events.firstIndex(of: event) else {return}
-        events.remove(at: index)
+//        guard let index = events.firstIndex(of: event) else {return}
+//        events.remove(at: index)
+        //self.events = dataSource.fetchIvents(predicate: predicateFilter)
     }
     
 }

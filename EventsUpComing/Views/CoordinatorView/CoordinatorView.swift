@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct CoordinatorView: View {
-
-    @StateObject var coordinator = Coordinator()
+    
+    @EnvironmentObject var coordinator: Coordinator
     
     var body: some View {
         NavigationStack(path: $coordinator.path) {
@@ -22,20 +22,26 @@ struct CoordinatorView: View {
                         coordinator.build(page: page)
                     }
                 }
-                .sheet(item: $coordinator.sheet) { sheet in
-                    switch sheet {
-                    case .createEvent:
-                        coordinator.build(sheet: sheet)
-                    case .shared:
-                        coordinator.build(sheet: sheet)
-                    case .editIvent(let iventmodel):
-                        coordinator.build(sheet: sheet, iventModelIndex: iventmodel)
-                    }
-                }
         }
-        .environmentObject(coordinator)
+        .sheet(item: $coordinator.sheet) { sheet in
+            switch sheet {
+            case .createEvent:
+                coordinator.build(sheet: sheet)
+            case .shared:
+                coordinator.build(sheet: sheet)
+            case .editIvent(let iventmodel):
+                coordinator.build(sheet: sheet, iventModel: iventmodel)
+            case .shareUseActivityVC(let event):
+                coordinator.build(sheet: sheet, iventModel: event)
+            case .shareByQRCode(let event):
+                coordinator.build(sheet: sheet, iventModel: event)
+            case .createEventFromQR(let encodeString):
+                coordinator.build(sheet: sheet, encodeString: encodeString)
+            }
+        }
     }
 }
+
 
 #Preview {
     CoordinatorView()

@@ -11,17 +11,11 @@ struct EditEvents: View {
     
     @EnvironmentObject var coordinator: Coordinator
     @EnvironmentObject var viewModel: EventViewModel
-  //  var index: Int
     @State var isEventChanged = false
-    @State var model: IventModel//(title: "")
-    
-    
-//    init(iventModelIndex: Int) {
-//        self.index = iventModelIndex
-//    }
+    @State var model: IventModel
     
     init(iventModel: IventModel) {
-        _model = State(initialValue: iventModel)
+        _model = State(wrappedValue: iventModel)
     }
     
     var body: some View {
@@ -35,8 +29,10 @@ struct EditEvents: View {
                 
                 Spacer()
                 
-                Button("Ok", action: coordinator.dismissSheet)
-                   
+                Button("Save") {
+                    coordinator.dismissSheet()
+                }
+                
             }.padding(.horizontal)
             
             Divider().padding(.horizontal)
@@ -46,11 +42,24 @@ struct EditEvents: View {
             }
             .shadow(radius: 10)
             .scrollContentBackground(.hidden)
+            
+            Menu("Share") {
+                Button {
+                    coordinator.present(sheet: .shareUseActivityVC(model))
+                } label: {
+                    Label("Share as a string", systemImage: "square.and.arrow.up")
+                }
+                
+                Button {
+                    coordinator.present(sheet: .shareByQRCode(model))
+                } label: {
+                    Label("Share by QRCode", systemImage: "qrcode.viewfinder")
+                }
+
+            }
+            .buttonStyle(.borderedProminent)
         }
         .padding()
-        .onAppear{
-          //  self.model = viewModel.events[index]
-        }
     }
     
     func deleteEvent() {
@@ -60,7 +69,5 @@ struct EditEvents: View {
 }
 
 //#Preview {
-//    EditEvents(iventModelIndex: 2)
-//        .environmentObject(Coordinator())
-//        .environmentObject(EventListViewModel())
+//    EditEvents(iventModel: IventModel(title: "Yura"))
 //}

@@ -9,7 +9,7 @@ import SwiftUI
 
 final class EventDataSource {
     private let modelContainer: ModelContainer
-    private let modelContext: ModelContext
+    let modelContext: ModelContext
 
     @MainActor
     static let shared = EventDataSource()
@@ -32,11 +32,6 @@ final class EventDataSource {
     
     func appendIvent(ivent: IventModel) {
         modelContext.insert(ivent)
-//        do {
-//            try modelContext.save()
-//        } catch {
-//            fatalError(error.localizedDescription)
-//        }
     }
 
     func fetchIvents(predicate: Predicate<IventModel> = .true) -> [IventModel] {
@@ -49,7 +44,8 @@ final class EventDataSource {
             fatalError(error.localizedDescription)
         }
     }
-
+    
+    
     func removeIvent(_ ivent: IventModel) {
         modelContext.delete(ivent)
     }

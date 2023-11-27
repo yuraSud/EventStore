@@ -12,6 +12,19 @@ struct CreateEventsView: View {
     @EnvironmentObject var coordinator: Coordinator
     @EnvironmentObject var viewModel: EventViewModel
     
+    var model: IventModel?
+    var isFromQRCode: Bool {
+        didSet {
+            print(isFromQRCode, "isQR")
+        }
+    }
+    
+    init(model: IventModel? = nil, isFromQRCode: Bool = false) {
+        self.isFromQRCode = isFromQRCode
+        self.model = model
+    }
+
+    
     var title: String {
         viewModel.title.isEmpty ? "New Title" : viewModel.title
     }
@@ -31,7 +44,6 @@ struct CreateEventsView: View {
                     viewModel.addNewIvent()
                     coordinator.dismissSheet()
                 }
-                .disabled(!viewModel.newEventIsDisable)
                 
                 
             }.padding(.horizontal)
@@ -45,6 +57,21 @@ struct CreateEventsView: View {
             .scrollContentBackground(.hidden)
         }
         .padding()
+        .onAppear {
+            if isFromQRCode {
+                if let model = model {
+                    viewModel.eventFromQR(event: model)
+                }
+            }
+        }
+    }
+    
+    func addEventFromQRCode() {
+        
+        if isFromQRCode {
+            
+            viewModel.addNewIvent()
+        }
     }
 }
 

@@ -7,27 +7,19 @@
 
 import SwiftUI
 
-enum Page: Hashable, Equatable {
+enum Page{
     case eventsList
     case content
 }
 
 enum Sheets: Hashable, Equatable, Identifiable {
     
-    static func == (lhs: Sheets, rhs: Sheets) -> Bool {
-        switch (lhs, rhs) {
-        case (.createEvent, .createEvent), (.shared, .shared):
-            return true
-        case (.editIvent, .editIvent):
-            return true
-        default:
-            return false
-        }
-    }
-    
     case createEvent
     case shared
     case editIvent(IventModel)
+    case shareUseActivityVC(IventModel)
+    case shareByQRCode(IventModel)
+    case createEventFromQR(String)
     
     var id: Self {
         self

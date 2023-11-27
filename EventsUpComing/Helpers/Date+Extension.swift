@@ -77,5 +77,9 @@ extension Date {
         return oneMonthFromNow ?? Date()
     }
     
-    
+    var dateToString: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "d,MMM yyyy, hh:mm"
+        return dateFormatter.string(from: self)
+    }
 }

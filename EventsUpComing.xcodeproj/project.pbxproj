@@ -10,6 +10,14 @@
 		9C43661B2B091831009E8348 /* EventKitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C43661A2B091831009E8348 /* EventKitViewModel.swift */; };
 		9C4366322B0DF3E7009E8348 /* EventDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4366312B0DF3E7009E8348 /* EventDataSource.swift */; };
 		9C4366342B0DF6B1009E8348 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4366332B0DF6B1009E8348 /* EventViewModel.swift */; };
+		9C47E3B12B138FD900FAD371 /* ShareUseActivityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C47E3B02B138FD900FAD371 /* ShareUseActivityVC.swift */; };
+		9C47E3B32B1395F400FAD371 /* ShareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C47E3B22B1395F400FAD371 /* ShareViewModel.swift */; };
+		9C47E3B52B139A5200FAD371 /* QRCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C47E3B42B139A5200FAD371 /* QRCodeGenerator.swift */; };
+		9C47E3B72B139AC700FAD371 /* ShareQRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C47E3B62B139AC700FAD371 /* ShareQRCodeView.swift */; };
+		9C47E3B92B13A2B100FAD371 /* EncodeDecodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C47E3B82B13A2B100FAD371 /* EncodeDecodeManager.swift */; };
+		9C47E3C02B13D3B300FAD371 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C47E3BF2B13D3B300FAD371 /* CameraView.swift */; };
+		9C47E3C22B13E30C00FAD371 /* PermissionCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C47E3C12B13E30C00FAD371 /* PermissionCamera.swift */; };
+		9C47E3C42B13E98800FAD371 /* QRScannerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C47E3C32B13E98800FAD371 /* QRScannerDelegate.swift */; };
 		9C74251B2B0605F300AE76C0 /* EventEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C74251A2B0605F300AE76C0 /* EventEditorView.swift */; };
 		9C74251F2B0613E100AE76C0 /* TextEditorAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C74251E2B0613E100AE76C0 /* TextEditorAppearance.swift */; };
 		9C7425222B065E8B00AE76C0 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7425212B065E8B00AE76C0 /* Date+Extension.swift */; };
@@ -25,7 +33,7 @@
 		9C7F18062AFEAA7200BDCDDF /* EventsUpComingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F18052AFEAA7200BDCDDF /* EventsUpComingUITestsLaunchTests.swift */; };
 		9C7F18142AFEABB600BDCDDF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F18132AFEABB600BDCDDF /* Coordinator.swift */; };
 		9C7F18162AFEAC0400BDCDDF /* ScreenPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F18152AFEAC0400BDCDDF /* ScreenPages.swift */; };
-		9C7F181B2AFEAF2400BDCDDF /* SharedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F181A2AFEAF2400BDCDDF /* SharedView.swift */; };
+		9C7F181B2AFEAF2400BDCDDF /* QRCodeScanerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F181A2AFEAF2400BDCDDF /* QRCodeScanerView.swift */; };
 		9C7F181D2AFEB03B00BDCDDF /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F181C2AFEB03B00BDCDDF /* CoordinatorView.swift */; };
 		9C7F181F2AFEB1F100BDCDDF /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F181E2AFEB1F100BDCDDF /* EventListView.swift */; };
 		9C7F18232AFEB31D00BDCDDF /* CreateEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F18222AFEB31D00BDCDDF /* CreateEventsView.swift */; };
@@ -33,13 +41,14 @@
 		9C7F182A2AFEC42300BDCDDF /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F18292AFEC42300BDCDDF /* Color+Extension.swift */; };
 		9C7F182D2AFEC5FF00BDCDDF /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C7F182C2AFEC5FF00BDCDDF /* Poppins-Regular.ttf */; };
 		9C7F18302AFEC78800BDCDDF /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F182F2AFEC78800BDCDDF /* Font+Extension.swift */; };
-		9C7F18332AFEC97B00BDCDDF /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F18322AFEC97B00BDCDDF /* EventListViewModel.swift */; };
+		9C7F18332AFEC97B00BDCDDF /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F18322AFEC97B00BDCDDF /* Period.swift */; };
 		9CA826782B04CC19004D5E2A /* EditEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA826772B04CC19004D5E2A /* EditEvents.swift */; };
 		9CDDF9A52B039AAF00A75C0C /* PeriodButtonsPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDDF9A42B039AAF00A75C0C /* PeriodButtonsPicker.swift */; };
 		9CDDF9AA2B03B5E700A75C0C /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDDF9A92B03B5E700A75C0C /* EventCell.swift */; };
 		9CDDF9AC2B03B88900A75C0C /* IventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDDF9AB2B03B88900A75C0C /* IventModel.swift */; };
 		9CDDF9AE2B03CC9400A75C0C /* HeaderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDDF9AD2B03CC9400A75C0C /* HeaderList.swift */; };
 		9CDDF9B02B03CDF300A75C0C /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CDDF9AF2B03CDF300A75C0C /* Poppins-SemiBold.ttf */; };
+		9CDFB7112B14B48000466166 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDFB7102B14B48000466166 /* String+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +72,14 @@
 		9C43661A2B091831009E8348 /* EventKitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventKitViewModel.swift; sourceTree = "<group>"; };
 		9C4366312B0DF3E7009E8348 /* EventDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDataSource.swift; sourceTree = "<group>"; };
 		9C4366332B0DF6B1009E8348 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
+		9C47E3B02B138FD900FAD371 /* ShareUseActivityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareUseActivityVC.swift; sourceTree = "<group>"; };
+		9C47E3B22B1395F400FAD371 /* ShareViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewModel.swift; sourceTree = "<group>"; };
+		9C47E3B42B139A5200FAD371 /* QRCodeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeGenerator.swift; sourceTree = "<group>"; };
+		9C47E3B62B139AC700FAD371 /* ShareQRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareQRCodeView.swift; sourceTree = "<group>"; };
+		9C47E3B82B13A2B100FAD371 /* EncodeDecodeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodeDecodeManager.swift; sourceTree = "<group>"; };
+		9C47E3BF2B13D3B300FAD371 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		9C47E3C12B13E30C00FAD371 /* PermissionCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionCamera.swift; sourceTree = "<group>"; };
+		9C47E3C32B13E98800FAD371 /* QRScannerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerDelegate.swift; sourceTree = "<group>"; };
 		9C74251A2B0605F300AE76C0 /* EventEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEditorView.swift; sourceTree = "<group>"; };
 		9C74251E2B0613E100AE76C0 /* TextEditorAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditorAppearance.swift; sourceTree = "<group>"; };
 		9C7425212B065E8B00AE76C0 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -81,7 +98,7 @@
 		9C7F18052AFEAA7200BDCDDF /* EventsUpComingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsUpComingUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9C7F18132AFEABB600BDCDDF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		9C7F18152AFEAC0400BDCDDF /* ScreenPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenPages.swift; sourceTree = "<group>"; };
-		9C7F181A2AFEAF2400BDCDDF /* SharedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedView.swift; sourceTree = "<group>"; };
+		9C7F181A2AFEAF2400BDCDDF /* QRCodeScanerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScanerView.swift; sourceTree = "<group>"; };
 		9C7F181C2AFEB03B00BDCDDF /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
 		9C7F181E2AFEB1F100BDCDDF /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
 		9C7F18222AFEB31D00BDCDDF /* CreateEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventsView.swift; sourceTree = "<group>"; };
@@ -90,13 +107,14 @@
 		9C7F182C2AFEC5FF00BDCDDF /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		9C7F182E2AFEC6E500BDCDDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9C7F182F2AFEC78800BDCDDF /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
-		9C7F18322AFEC97B00BDCDDF /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
+		9C7F18322AFEC97B00BDCDDF /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
 		9CA826772B04CC19004D5E2A /* EditEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEvents.swift; sourceTree = "<group>"; };
 		9CDDF9A42B039AAF00A75C0C /* PeriodButtonsPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodButtonsPicker.swift; sourceTree = "<group>"; };
 		9CDDF9A92B03B5E700A75C0C /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		9CDDF9AB2B03B88900A75C0C /* IventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IventModel.swift; sourceTree = "<group>"; };
 		9CDDF9AD2B03CC9400A75C0C /* HeaderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderList.swift; sourceTree = "<group>"; };
 		9CDDF9AF2B03CDF300A75C0C /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		9CDFB7102B14B48000466166 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +142,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C47E3BE2B13D38F00FAD371 /* QRScanerView */ = {
+			isa = PBXGroup;
+			children = (
+				9C7F181A2AFEAF2400BDCDDF /* QRCodeScanerView.swift */,
+				9C47E3BF2B13D3B300FAD371 /* CameraView.swift */,
+				9C47E3C32B13E98800FAD371 /* QRScannerDelegate.swift */,
+			);
+			path = QRScanerView;
+			sourceTree = "<group>";
+		};
 		9C7425202B062A0500AE76C0 /* HelpersView */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,7 +258,8 @@
 		9C7F18182AFEAEEE00BDCDDF /* SharedView */ = {
 			isa = PBXGroup;
 			children = (
-				9C7F181A2AFEAF2400BDCDDF /* SharedView.swift */,
+				9C47E3B02B138FD900FAD371 /* ShareUseActivityVC.swift */,
+				9C47E3B62B139AC700FAD371 /* ShareQRCodeView.swift */,
 			);
 			path = SharedView;
 			sourceTree = "<group>";
@@ -238,8 +267,9 @@
 		9C7F18192AFEAEF800BDCDDF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9C7F18212AFEB30800BDCDDF /* Events */,
+				9C47E3BE2B13D38F00FAD371 /* QRScanerView */,
 				9C7F18202AFEB2D800BDCDDF /* CoordinatorView */,
+				9C7F18212AFEB30800BDCDDF /* Events */,
 				9C7F18172AFEAEE100BDCDDF /* EventsView */,
 				9C7F18182AFEAEEE00BDCDDF /* SharedView */,
 			);
@@ -287,6 +317,8 @@
 				9C7F18292AFEC42300BDCDDF /* Color+Extension.swift */,
 				9C7F182F2AFEC78800BDCDDF /* Font+Extension.swift */,
 				9C7425212B065E8B00AE76C0 /* Date+Extension.swift */,
+				9C47E3B82B13A2B100FAD371 /* EncodeDecodeManager.swift */,
+				9CDFB7102B14B48000466166 /* String+Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -303,10 +335,10 @@
 		9C7F18312AFEC95E00BDCDDF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				9C7F18322AFEC97B00BDCDDF /* EventListViewModel.swift */,
 				9C43661A2B091831009E8348 /* EventKitViewModel.swift */,
 				9C4366312B0DF3E7009E8348 /* EventDataSource.swift */,
 				9C4366332B0DF6B1009E8348 /* EventViewModel.swift */,
+				9C47E3B22B1395F400FAD371 /* ShareViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -314,7 +346,10 @@
 		9CDDF9A62B039ADB00A75C0C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9C7F18322AFEC97B00BDCDDF /* Period.swift */,
 				9CDDF9AB2B03B88900A75C0C /* IventModel.swift */,
+				9C47E3B42B139A5200FAD371 /* QRCodeGenerator.swift */,
+				9C47E3C12B13E30C00FAD371 /* PermissionCamera.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -459,23 +494,32 @@
 				9C7F17E92AFEAA7100BDCDDF /* ContentView.swift in Sources */,
 				9C7F18232AFEB31D00BDCDDF /* CreateEventsView.swift in Sources */,
 				9CDDF9A52B039AAF00A75C0C /* PeriodButtonsPicker.swift in Sources */,
+				9CDFB7112B14B48000466166 /* String+Extension.swift in Sources */,
 				9C43661B2B091831009E8348 /* EventKitViewModel.swift in Sources */,
 				9CDDF9AE2B03CC9400A75C0C /* HeaderList.swift in Sources */,
+				9C47E3B72B139AC700FAD371 /* ShareQRCodeView.swift in Sources */,
 				9CDDF9AA2B03B5E700A75C0C /* EventCell.swift in Sources */,
 				9C7425272B076FD000AE76C0 /* QueryListView.swift in Sources */,
-				9C7F181B2AFEAF2400BDCDDF /* SharedView.swift in Sources */,
+				9C7F181B2AFEAF2400BDCDDF /* QRCodeScanerView.swift in Sources */,
 				9C7425222B065E8B00AE76C0 /* Date+Extension.swift in Sources */,
+				9C47E3C02B13D3B300FAD371 /* CameraView.swift in Sources */,
 				9C74251B2B0605F300AE76C0 /* EventEditorView.swift in Sources */,
 				9C7425252B06894700AE76C0 /* SwitDataManager.swift in Sources */,
+				9C47E3C42B13E98800FAD371 /* QRScannerDelegate.swift in Sources */,
 				9C74251F2B0613E100AE76C0 /* TextEditorAppearance.swift in Sources */,
 				9C7F17EB2AFEAA7100BDCDDF /* Todo.swift in Sources */,
+				9C47E3B32B1395F400FAD371 /* ShareViewModel.swift in Sources */,
+				9C47E3B92B13A2B100FAD371 /* EncodeDecodeManager.swift in Sources */,
 				9C7F17E72AFEAA7100BDCDDF /* EventsUpComingApp.swift in Sources */,
 				9CDDF9AC2B03B88900A75C0C /* IventModel.swift in Sources */,
 				9C7F18272AFEC1B900BDCDDF /* ButtonChoise.swift in Sources */,
+				9C47E3B52B139A5200FAD371 /* QRCodeGenerator.swift in Sources */,
 				9C4366322B0DF3E7009E8348 /* EventDataSource.swift in Sources */,
-				9C7F18332AFEC97B00BDCDDF /* EventListViewModel.swift in Sources */,
+				9C7F18332AFEC97B00BDCDDF /* Period.swift in Sources */,
+				9C47E3C22B13E30C00FAD371 /* PermissionCamera.swift in Sources */,
 				9C4366342B0DF6B1009E8348 /* EventViewModel.swift in Sources */,
 				9C7F182A2AFEC42300BDCDDF /* Color+Extension.swift in Sources */,
+				9C47E3B12B138FD900FAD371 /* ShareUseActivityVC.swift in Sources */,
 				9C7F181F2AFEB1F100BDCDDF /* EventListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -644,6 +688,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EventsUpComing/Info.plist;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Give usage description";
+				INFOPLIST_KEY_NSCameraUsageDescription = "get access to camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -674,6 +720,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EventsUpComing/Info.plist;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Give usage description";
+				INFOPLIST_KEY_NSCameraUsageDescription = "get access to camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

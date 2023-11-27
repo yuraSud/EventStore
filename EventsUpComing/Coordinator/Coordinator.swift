@@ -9,10 +9,16 @@ import SwiftUI
 
 class Coordinator: ObservableObject {
     
-    @Published var path = NavigationPath() 
+    @State var path = NavigationPath()
     @Published var sheet: Sheets?
     @EnvironmentObject var viewModel: EventViewModel
-    
+    @StateObject var shareViewModel = ShareViewModel()
+    @Published var isShowAlert = false {
+        didSet {
+            print(isShowAlert, "didset")
+        }
+    }
+    @Published var errorMessage = ""
     
     func push(page: Page) {
         path.append(page)
@@ -38,6 +44,13 @@ class Coordinator: ObservableObject {
         viewModel.appendEvent(event: ivent)
     }
     
+    func showAlert(message: String) {
+        dismissSheet()
+        errorMessage = message
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.isShowAlert.toggle()
+        }
+    }
     
     @ViewBuilder
     func build(page: Page) -> some View {
@@ -50,16 +63,30 @@ class Coordinator: ObservableObject {
     }
     
     @ViewBuilder
-    func build(sheet: Sheets, iventModelIndex: IventModel) -> some View {
-        EditEvents(iventModel: iventModelIndex)
+    func build(sheet: Sheets, iventModel: IventModel) -> some View {
+        if sheet == .editIvent(iventModel) {
+            EditEvents(iventModel: iventModel)
+        } else if sheet == .shareUseActivityVC(iventModel) {
+            let eventString = shareViewModel.transformEventToString(event: iventModel)
+            ShareUseActivityViewController(activityItems: [eventString])
+        } else if sheet == .shareByQRCode(iventModel) {
+            let encodeString = EncodeDecodeManager.encodeEventModelToString(event: iventModel)
+            ShareQRCodeView(titleEvent: iventModel.title, textToShare: encodeString)
+        }
     }
     
     @ViewBuilder
     func build(sheet: Sheets) -> some View {
         if sheet == .shared {
-            SharedView()
+            QRCodeScanerView()
         } else if sheet == .createEvent {
             CreateEventsView()
         }
+    }
+    
+    @ViewBuilder
+    func build(sheet: Sheets, encodeString: String) -> some View {
+        let event = EncodeDecodeManager.decodeStringToEvent(encodeString: encodeString)
+        CreateEventsView(model: event, isFromQRCode: true)
     }
 }
